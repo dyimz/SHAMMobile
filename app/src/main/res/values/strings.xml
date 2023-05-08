@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">shammobile</string>
+
+    <string-array name="yeartofinish">
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+        <item>2028</item>
+        <item>2029</item>
+        <item>2030</item>
+        <item>2031</item>
+        <item>2032</item>
+        <item>2033</item>
+        <item>2034</item>
+        <item>2035</item>
+        <item>2036</item>
+        <item>2037</item>
+        <item>2038</item>
+        <item>2039</item>
+        <item>2040</item>
+    </string-array>
+
+    <string-array name="strandchoicestem">
+        <item>Accountancy, Business and Management</item>
+        <item>General Academic</item>
+        <item>Science, Technology, Engineering and Mathematics</item>
+        <item>Humanities and Social Sciences</item>
+        <item>Caregiving (Nursing Arts)</item>
+        <item>Electrical Installation and Maintenance</item>
+        <item>Home Economics</item>
+        <item>Information and Communications Technology</item>
+    </string-array>
+
+    <string-array name="strandchoicenostem">
+        <item>Accountancy, Business and Management</item>
+        <item>General Academic</item>
+        <item>Humanities and Social Sciences</item>
+        <item>Caregiving (Nursing Arts)</item>
+        <item>Electrical Installation and Maintenance</item>
+        <item>Home Economics</item>
+        <item>Information and Communications Technology</item>
+    </string-array>
+
+    <string-array name="extname">
+        <item>N/A</item>
+        <item>Sr</item>
+        <item>Jr</item>
+        <item>I</item>
+        <item>II</item>
+        <item>III</item>
+    </string-array>
+
+    <string-array name="education">
+        <item>none</item>
+        <item>elementary graduate</item>
+        <item>high school graduate</item>
+        <item>college graduate</item>
+    </string-array>
+
+    <string-array name="employment">
+        <item>house husband</item>
+        <item>self-employed</item>
+        <item>fixed-employed</item>
+        <item>regular-employed</item>
+    </string-array>
+
+    <string-array name="teachercivilstatus">
+        <item>single</item>
+        <item>married</item>
+        <item>divorced</item>
+        <item>separated</item>
+        <item>widowed</item>
+    </string-array>
+
+    <string name="menu_drawer_open">Drawer Open</string>
+    <string name="menu_drawer_close">Drawer Close</string>
+
+</resources>

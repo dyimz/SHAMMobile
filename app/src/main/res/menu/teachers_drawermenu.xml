@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/teacherprofile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Profile" />
+    <item
+        android:id="@+id/teacherclass"
+        android:icon="@drawable/ic_baseline_class_24"
+        android:title="Classes" />
+    <item
+        android:id="@+id/teacherschedule"
+        android:icon="@drawable/ic_baseline_schedule_24"
+        android:title="Schedule" />
+    <item
+        android:id="@+id/teacheradvisee"
+        android:icon="@drawable/ic_baseline_view_list_24"
+        android:title="Advisees" />
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/teacherlogout"
+            android:icon="@drawable/ic_baseline_logout_24"
+            android:title="LOGOUT"
+            />
+    </group>
+
+
+</menu>

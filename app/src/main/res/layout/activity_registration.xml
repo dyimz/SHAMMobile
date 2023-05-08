@@ -1,0 +1,1978 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Student Image"
+                    android:textColor="#F8554A4A"
+                    android:textSize="16sp"
+                    android:textStyle="bold|normal" />
+
+                <RelativeLayout
+                    android:layout_width="165dp"
+                    android:layout_height="165dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/image"
+                        android:layout_width="155dp"
+                        android:layout_height="155dp"
+                        android:elevation="15dp"
+                        android:padding="5dp"
+                        android:src="@drawable/slider"
+                        app:shapeAppearanceOverlay="@style/Circular" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/chooseimage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:elevation="15dp"
+                        android:padding="5dp"
+                        android:src="@drawable/baseline_photo_camera_24"
+                        app:shapeAppearanceOverlay="@style/Circular" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:onClick="expandgrade"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:contentPadding="20dp">
+
+
+                <LinearLayout
+                    android:id="@+id/gradelevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GRADE LEVEL AND SCHOOL INFORMATION"
+                        android:textColor="@color/orange"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/gradeleveldetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="10dp"
+                            android:visibility="gone">
+
+
+                            <TextView
+                                android:id="@+id/textStudStat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Current Student at SVNHS?"
+                                android:textSize="17dp"></TextView>
+
+                            <RadioGroup
+                                android:id="@+id/StudStat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/StudStattrue"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="Yes"
+                                    android:textSize="15dp" />
+
+                                <RadioButton
+                                    android:id="@+id/StudStatfalse"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="No"
+                                    android:textSize="15dp" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/textLrnStat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Do you have LRN??"
+                                android:textSize="17dp"></TextView>
+
+                            <RadioGroup
+                                android:id="@+id/LrnStat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/LrnStattrue"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="Yes"
+                                    android:textSize="15dp" />
+
+                                <RadioButton
+                                    android:id="@+id/LrnStatfalse"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="No"
+                                    android:textSize="15dp" />
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tLRN"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Learner Reference Number:"
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtULRN"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="LRN "
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <!--                dropdown-->
+                            <TextView
+                                android:id="@+id/textSection"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Section:"
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/Section"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Section"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <TextView
+                                android:id="@+id/textYeartofinish"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Year to finish Grade10?"
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/Yeartofinish"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Year to Finish Junior High"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:endIconMode="dropdown_menu"
+                                app:hintTextColor="@color/orange">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/dropdown_Yeartofinish"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <TextView
+                                android:id="@+id/tLastschoolattended"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Last School Attended: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtULastschoolattended"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Last School Attended"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tLastschooladdress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Last School Address: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtULastschooladdress"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Last School Address"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <TextView
+                                android:id="@+id/tSchoolid"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="School ID: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUSchoolid"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Last School ID"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textSchoolType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Last School Type?"
+                                android:textSize="17dp"></TextView>
+
+                            <RadioGroup
+                                android:id="@+id/SchoolType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/SchoolTypeprivate"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="Private"
+                                    android:textSize="15dp" />
+
+                                <RadioButton
+                                    android:id="@+id/SchoolTypepublic"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="Public"
+                                    android:textSize="15dp" />
+                            </RadioGroup>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:layout_marginTop="15dp"
+                                android:background="#79D6D1D1" />
+
+                            <TextView
+                                android:id="@+id/txtGradess"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="GRADES"
+                                android:textColor="@color/blue"
+                                android:textSize="20dp"></TextView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingTop="10dp">
+
+                                <TextView
+                                    android:id="@+id/tEnglishgrade"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left"
+                                    android:paddingRight="3dp"
+                                    android:text="English"
+                                    android:textSize="17dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/tMathgrade"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left"
+                                    android:paddingLeft="3dp"
+                                    android:text="Mathematics"
+                                    android:textSize="17dp"></TextView>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/edtUEnglishgrade"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:hint="Grade in English"
+                                    android:paddingRight="3dp"
+                                    android:textColorHint="@color/orange"
+                                    app:boxBackgroundMode="outline"
+                                    app:boxStrokeColor="@color/orange"
+                                    app:hintTextColor="@color/orange">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"/>
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/edtUMathgrade"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:hint="Grade in Mathematics"
+                                    android:paddingLeft="3dp"
+                                    android:textColorHint="@color/orange"
+                                    app:boxBackgroundMode="outline"
+                                    app:boxStrokeColor="@color/orange"
+                                    app:hintTextColor="@color/orange">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"/>
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingTop="10dp">
+
+                                <TextView
+                                    android:id="@+id/tSciencegrade"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left"
+                                    android:paddingRight="3dp"
+                                    android:text="Science"
+                                    android:textSize="17dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/tFilipinograde"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left"
+                                    android:paddingLeft="3dp"
+                                    android:text="Filipino"
+                                    android:textSize="17dp"></TextView>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/edtUSciencegrade"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:hint="Grade in Science"
+                                    android:paddingRight="3dp"
+                                    android:textColorHint="@color/orange"
+                                    app:boxBackgroundMode="outline"
+                                    app:boxStrokeColor="@color/orange"
+                                    app:hintTextColor="@color/orange">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"/>
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/edtUFilipinograde"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:hint="Grade in Filipino"
+                                    android:paddingLeft="3dp"
+                                    android:textColorHint="@color/orange"
+                                    app:boxBackgroundMode="outline"
+                                    app:boxStrokeColor="@color/orange"
+                                    app:hintTextColor="@color/orange">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"/>
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:background="#79D6D1D1" />
+
+                            <TextView
+                                android:id="@+id/txtStrands"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="STRAND"
+                                android:textColor="@color/blue"
+                                android:textSize="20dp"></TextView>
+
+                            <TextView
+                                android:id="@+id/textFirstchoice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="First Choice:"
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/Firstchoice"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="1st Strand"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:endIconMode="dropdown_menu"
+                                app:hintTextColor="@color/orange">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/dropdown_Firstchoice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="none" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textSecondchoice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Second Choice:"
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/Secondchoice"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="2nd Strand"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:endIconMode="dropdown_menu"
+                                app:hintTextColor="@color/orange">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/dropdown_Secondchoice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="none" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textThirdchoice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Third Choice:"
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/Thirdchoice"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="3rd Strand"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:endIconMode="dropdown_menu"
+                                app:hintTextColor="@color/orange">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/dropdown_Thirdchoice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="none" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        </LinearLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:onClick="expandpersonal"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:contentPadding="20dp">
+
+                <LinearLayout
+                    android:id="@+id/personalinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PERSONAL INFORMATION"
+                        android:textColor="@color/orange"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/personalinfodetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="10dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tPSA"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="PSA Number: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUPSA"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="PSA Number"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Email: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUEmail"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Email"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <TextView
+                                android:id="@+id/tFname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="First Name: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUFname"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="First Name"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tMname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Middle Name: Leave Blank if None"
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUMname"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Middle Name"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tLname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Last Name: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtULname"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Last Name"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <TextView
+                                android:id="@+id/textExtname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Name Extension:"
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/Extname"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Extension Name"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:endIconMode="dropdown_menu"
+                                app:hintTextColor="@color/orange">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/dropdown_Extname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tBirthdate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Birthday: "
+                                android:textSize="17dp"></TextView>
+
+                            <TextView
+                                android:id="@+id/tvDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:hint="SELECT DATE"
+                                android:textColorHint="@color/orange"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/tUserAge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Age: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUAge"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Age"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <TextView
+                                android:id="@+id/textGender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Gender:"
+                                android:textSize="17dp"></TextView>
+
+                            <RadioGroup
+                                android:id="@+id/Gender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/Gendermale"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="Male"
+                                    android:textSize="15dp" />
+
+                                <RadioButton
+                                    android:id="@+id/Genderfemale"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="Female"
+                                    android:textSize="15dp" />
+                            </RadioGroup>
+
+
+                            <TextView
+                                android:id="@+id/tContact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Contact: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUContact"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Contact Number"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="phone"
+                                    android:text="+63"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <TextView
+                                android:id="@+id/tMothertongue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Mothertongue: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUMothertongue"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Mother Tongue"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <TextView
+                                android:id="@+id/tReligion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Religion: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUReligion"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Religion"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <TextView
+                                android:id="@+id/tIndigenous"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Indigenous People? "
+                                android:textSize="17dp"></TextView>
+
+                            <RadioGroup
+                                android:id="@+id/Indigenous"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/Indigenoustrue"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="Yes"
+                                    android:textSize="15dp" />
+
+                                <RadioButton
+                                    android:id="@+id/Indigenousfalse"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="No"
+                                    android:textSize="15dp" />
+                            </RadioGroup>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUIndigenous"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Indigenous People"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tSpecial"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Special Needs: "
+                                android:textSize="17dp"></TextView>
+
+                            <RadioGroup
+                                android:id="@+id/Special"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/Specialtrue"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="Yes"
+                                    android:textSize="15dp" />
+
+                                <RadioButton
+                                    android:id="@+id/Specialfalse"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="No"
+                                    android:textSize="15dp" />
+                            </RadioGroup>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUSpecial"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Special Needs: "
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tDevices"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Assistive Devices: "
+                                android:textSize="17dp"></TextView>
+
+                            <RadioGroup
+                                android:id="@+id/Devices"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/Devicestrue"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="Yes"
+                                    android:textSize="15dp" />
+
+                                <RadioButton
+                                    android:id="@+id/Devicesfalse"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="No"
+                                    android:textSize="15dp" />
+                            </RadioGroup>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUDevices"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Devices"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:layout_marginTop="15dp"
+                                android:background="#79D6D1D1" />
+
+                            <TextView
+                                android:id="@+id/txtAdd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="ADDRESS"
+                                android:textColor="@color/blue"
+                                android:textSize="20dp"></TextView>
+
+
+                            <TextView
+                                android:id="@+id/tStreet"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="House Number and Street: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUStreet"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="House Number and Street"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tBarangay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Barangay: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUBarangay"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Barangay"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tCity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="City: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUCity"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="City"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <TextView
+                                android:id="@+id/tProvince"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Province: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUProvince"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Province"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <TextView
+                                android:id="@+id/tRegion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Region: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtURegion"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Region"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:layout_marginTop="15dp"
+                                android:background="#79D6D1D1" />
+
+                        </LinearLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:onClick="expandparent"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:contentPadding="20dp">
+
+                <LinearLayout
+                    android:id="@+id/parentinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PARENT/GUARDIAN INFORMATION"
+                        android:textColor="@color/orange"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/parentinfodetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="10dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tFathername"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Father Name: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUFathername"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Father Name "
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textFathereducation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Educational Attainment:"
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/Fathereducation"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Father's Highest Educational Attainment"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:endIconMode="dropdown_menu"
+                                app:hintTextColor="@color/orange">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/dropdown_Fathereducation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textFatheremployment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Employment Status:"
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/Fatheremployment"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Father's Employment Status"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:endIconMode="dropdown_menu"
+                                app:hintTextColor="@color/orange">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/dropdown_Fatheremployment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <TextView
+                                android:id="@+id/textFatherworkstat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Working from home due to ECQ?"
+                                android:textSize="17dp"></TextView>
+
+                            <RadioGroup
+                                android:id="@+id/Fatherworkstat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/Fatherworkstatyes"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="Yes"
+                                    android:textSize="15dp" />
+
+                                <RadioButton
+                                    android:id="@+id/Fatherworkstatno"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="No"
+                                    android:textSize="15dp" />
+
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tFathercontact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Contact Number: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUFathercontact"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Father's Contact Number"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="phone"
+                                    android:text="+63"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="15dp"
+                                android:background="#79D6D1D1" />
+
+                            <TextView
+                                android:id="@+id/tMothername"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Mother's Name: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUMothername"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Mother's Name "
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textMothereducation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Educational Attainment:"
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/Mothereducation"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Mother's Highest Educational Attainment"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:endIconMode="dropdown_menu"
+                                app:hintTextColor="@color/orange">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/dropdown_Mothereducation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textMotheremployment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Employment Status:"
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/Motheremployment"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Mother's Employment Status"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:endIconMode="dropdown_menu"
+                                app:hintTextColor="@color/orange">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/dropdown_Motheremployment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textMotherworkstat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Working from home due to ECQ?"
+                                android:textSize="17dp"></TextView>
+
+                            <RadioGroup
+                                android:id="@+id/Motherworkstat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/Motherworkstatyes"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="Yes"
+                                    android:textSize="15dp" />
+
+                                <RadioButton
+                                    android:id="@+id/Motherworkstatno"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="No"
+                                    android:textSize="15dp" />
+
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tMothercontact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Contact Number: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUMothercontact"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Mother's Contact Number"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="phone"
+                                    android:text="+63"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="15dp"
+                                android:background="#79D6D1D1" />
+
+                            <TextView
+                                android:id="@+id/texthasGuardian"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Living with Guardian?"
+                                android:textSize="17dp"></TextView>
+
+                            <RadioGroup
+                                android:id="@+id/hasGuardian"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/hasGuardianyes"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="Yes"
+                                    android:textSize="15dp" />
+
+                                <RadioButton
+                                    android:id="@+id/hasGuardianno"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="No"
+                                    android:textSize="15dp" />
+
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tGuardian"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Parent Information if No Guardian"
+                                android:textSize="17dp"></TextView>
+
+                            <TextView
+                                android:id="@+id/tGuardianname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Guardian's Name: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUGuardianname"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Guardian's Name "
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textGuardianeducation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Educational Attainment:"
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/Guardianeducation"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Guardian's Highest Educational Attainment"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:endIconMode="dropdown_menu"
+                                app:hintTextColor="@color/orange">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/dropdown_Guardianeducation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textGuardianemployment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Employment Status:"
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/Guardianemployment"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Guardian's Employment Status"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:endIconMode="dropdown_menu"
+                                app:hintTextColor="@color/orange">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/dropdown_Guardianemployment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textGuardianworkstat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Working from home due to ECQ?"
+                                android:textSize="17dp"></TextView>
+
+                            <RadioGroup
+                                android:id="@+id/Guardianworkstat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <RadioButton
+                                    android:id="@+id/Guardianworkstatyes"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="Yes"
+                                    android:textSize="15dp" />
+
+                                <RadioButton
+                                    android:id="@+id/Guardianworkstatno"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/radiobutton"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="No"
+                                    android:textSize="15dp" />
+
+                            </RadioGroup>
+
+                            <TextView
+                                android:id="@+id/tGuardiancontact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:text="Contact Number: "
+                                android:textSize="17dp"></TextView>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edtUGuardiancontact"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Guardian's Contact Number"
+                                android:textColorHint="@color/orange"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/orange"
+                                app:hintTextColor="@color/orange">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="phone"
+                                    android:text="+63"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Report Card"
+                        android:textColor="#F8554A4A"
+                        android:textSize="16sp"
+                        android:textStyle="bold|normal" />
+
+                    <RelativeLayout
+                        android:layout_width="165dp"
+                        android:layout_height="165dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/card"
+                            android:layout_width="155dp"
+                            android:layout_height="155dp"
+                            android:elevation="15dp"
+                            android:padding="5dp"
+                            android:src="@drawable/logo"
+                            app:shapeAppearanceOverlay="@style/Circular" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/choosecard"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:elevation="15dp"
+                            android:padding="5dp"
+                            android:src="@drawable/baseline_photo_camera_24"
+                            app:shapeAppearanceOverlay="@style/Circular" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Birth Certificate"
+                        android:textColor="#F8554A4A"
+                        android:textSize="16sp"
+                        android:textStyle="bold|normal" />
+
+                    <RelativeLayout
+                        android:layout_width="165dp"
+                        android:layout_height="165dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/cert"
+                            android:layout_width="155dp"
+                            android:layout_height="155dp"
+                            android:elevation="15dp"
+                            android:padding="5dp"
+                            android:src="@drawable/logo"
+                            app:shapeAppearanceOverlay="@style/Circular" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/choosecert"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:elevation="15dp"
+                            android:padding="5dp"
+                            android:src="@drawable/baseline_photo_camera_24"
+                            app:shapeAppearanceOverlay="@style/Circular" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/blue"
+                android:paddingHorizontal="30dp"
+                android:text="SUBMIT"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="50dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

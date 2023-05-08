@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@drawable/background01"
+    tools:context=".activities.students.StudentsProfileActivity">
+
+
+    <!--  START image card-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/tools"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="325dp">
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="40dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true"
+                card_view:cardCornerRAdius="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="310dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="23dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/name"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/lrn"
+                        android:text="LRN: "
+                        android:textSize="13sp"
+                        android:textStyle="normal"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textColor="#5C5A5A"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/contact"
+                        android:text="CONTACT: "
+                        android:textSize="13sp"
+                        android:textStyle="normal"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textColor="#5C5A5A"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/email"
+                        android:text="EMAIL: "
+                        android:textSize="13sp"
+                        android:textStyle="normal"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textColor="#5C5A5A"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/strand"
+                        android:text="STRAND &amp; SECTION: "
+                        android:textSize="13sp"
+                        android:textStyle="normal"
+                        android:gravity="center_horizontal"
+                        android:textColor="#5C5A5A"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"/>
+
+                    <Button
+                        android:id="@+id/changepass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/orange"
+                        android:paddingHorizontal="30dp"
+                        android:text="Change Password"
+                        android:textSize="15sp"
+                        app:cornerRadius="20dp"
+                       />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:elevation="15dp"
+                android:padding="5dp"
+                android:src="@drawable/slider"
+                app:shapeAppearanceOverlay="@style/Circular" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/chooseimage"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:elevation="15dp"
+                android:padding="5dp"
+                android:src="@drawable/baseline_photo_camera_24"
+                app:shapeAppearanceOverlay="@style/Circular" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!--  END image card-->
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--personal information card-->
+            <androidx.cardview.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:card_view="http://schemas.android.com/tools"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true"
+                card_view:cardCornerRAdius="5dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:padding="1dp"
+                            android:gravity="center"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:padding="5dp"
+                                android:src="@drawable/ic_baseline_menu_24"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"/>
+                            <TextView
+                                android:text="Personal Information"
+                                android:textSize="16sp"
+                                android:layout_margin="5dp"
+                                android:textStyle="bold|normal"
+                                android:textColor="#F8554A4A"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:padding="1dp"
+                            android:gravity="center"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/studenteditinfo"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_baseline_mode_edit_24"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"/>
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <!--birthdate-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="42dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Birthdate: "
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:gravity=""
+                            android:textColor="#5C5A5A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/birthdate"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--end-->
+
+                    <!--age-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="42dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Age: "
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:gravity=""
+                            android:textColor="#5C5A5A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="55dp"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/age"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--end-->
+
+                    <!--gender-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="42dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Gender: "
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:gravity=""
+                            android:textColor="#5C5A5A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="33dp"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/gender"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--end-->
+
+                    <!--contact-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="42dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Mother \nTongue: "
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:gravity=""
+                            android:textColor="#5C5A5A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="31.5dp"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/mothertongue"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--end-->
+
+                    <!--religion-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="42dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Religion: "
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:gravity=""
+                            android:textColor="#5C5A5A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="28.5dp"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/religion"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="42dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Address: "
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:gravity=""
+                            android:textColor="#5C5A5A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="19.5dp"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/address"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--end-->
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--personal information card-->
+
+
+
+
+            <!--guardian information card-->
+            <androidx.cardview.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:card_view="http://schemas.android.com/tools"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true"
+                card_view:cardCornerRAdius="5dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:padding="1dp"
+                            android:gravity="center"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:padding="5dp"
+                                android:src="@drawable/ic_baseline_person_pin_circle_24"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"/>
+                            <TextView
+                                android:text="Parent/Guardian"
+                                android:textSize="16sp"
+                                android:layout_margin="5dp"
+                                android:textStyle="bold|normal"
+                                android:textColor="#F8554A4A"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:padding="1dp"
+                            android:gravity="center"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/studenteditguardian"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_baseline_mode_edit_24"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"/>
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <!--mother name-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="42dp"
+                            android:layout_marginRight="0dp"
+                            android:text="Mother's Name: "
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:gravity=""
+                            android:textColor="#5C5A5A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="2dp"
+
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/mothername"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--end-->
+
+                    <!--contact-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="42dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Contact Number: "
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:gravity=""
+                            android:textColor="#5C5A5A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="3dp"
+                            android:id="@+id/mothercontact"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--end-->
+
+                    <View
+                        android:background="#79D6D1D1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <!--fathers name-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="42dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Father's Name: "
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:gravity=""
+                            android:textColor="#5C5A5A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/fathername"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--end-->
+
+                    <!--contact-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="42dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Contact Number: "
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:gravity=""
+                            android:textColor="#5C5A5A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="3dp"
+                            android:id="@+id/fathercontact"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--end-->
+
+                    <View
+                        android:background="#79D6D1D1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <!--guardian-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="42dp"
+                            android:layout_marginRight="2dp"
+                            android:text="Guardian's Name: "
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:gravity=""
+                            android:textColor="#5C5A5A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/guardianname"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--end-->
+
+                    <!--contact-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="42dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Contact Number: "
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:gravity=""
+                            android:textColor="#5C5A5A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="3dp"
+                            android:id="@+id/guardiancontact"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <!--end-->
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--guardian information card-->
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

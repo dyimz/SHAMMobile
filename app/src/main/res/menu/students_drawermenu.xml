@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/studentprofile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Profile" />
+    <item
+        android:id="@+id/studentsschedule"
+        android:icon="@drawable/ic_baseline_schedule_24"
+        android:title="Schedule" />
+    <item
+        android:id="@+id/studentgrade"
+        android:icon="@drawable/ic_baseline_view_list_24"
+        android:title="Grades" />
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/studentlogout"
+            android:icon="@drawable/ic_baseline_logout_24"
+            android:title="LOGOUT" />
+    </group>
+
+
+</menu>

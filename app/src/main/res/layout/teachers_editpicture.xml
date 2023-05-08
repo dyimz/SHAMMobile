@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".activities.teachers.TeachersEditPictureActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/btnBackArrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+        app:title="Edit Profile Picture"
+        android:textAlignment="center"
+        app:titleTextColor="@color/white"
+        android:elevation="5dp">
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="165dp"
+            android:layout_height="165dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image"
+                android:layout_width="155dp"
+                android:layout_height="155dp"
+                android:elevation="15dp"
+                android:padding="5dp"
+                android:src="@drawable/slider"
+                app:shapeAppearanceOverlay="@style/Circular" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/chooseimage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:elevation="15dp"
+                android:padding="5dp"
+                android:src="@drawable/baseline_photo_camera_24"
+                app:shapeAppearanceOverlay="@style/Circular" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/orange"
+            android:paddingHorizontal="30dp"
+            android:text="SAVE"
+            android:layout_marginLeft="5dp"
+            android:textSize="18sp"
+            app:cornerRadius="20dp" />
+    </LinearLayout>
+</LinearLayout>

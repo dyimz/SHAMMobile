@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".activities.teachers.TeachersEditBackgroundActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/btnBackArrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+        app:title="Edit My Background Information"
+        android:textAlignment="center"
+        app:titleTextColor="@color/white"
+        android:elevation="5dp">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:paddingTop="10dp"
+            android:id="@+id/tmajor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Major"
+            android:textSize="17dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/major"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:hint="Major"
+            android:textColorHint="@color/orange"
+            app:boxStrokeColor="@color/orange"
+            app:hintTextColor="@color/orange"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:paddingTop="10dp"
+            android:id="@+id/tcertificate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Certificate"
+            android:textSize="17dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/certificate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:hint="Certificate"
+            android:textColorHint="@color/orange"
+            app:boxStrokeColor="@color/orange"
+            app:hintTextColor="@color/orange"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:paddingTop="10dp"
+            android:id="@+id/tminor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Minor"
+            android:textSize="17dp"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/minor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:hint="Minor"
+            android:textColorHint="@color/orange"
+            app:boxStrokeColor="@color/orange"
+            app:hintTextColor="@color/orange"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:paddingTop="10dp"
+            android:id="@+id/tposition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Position"
+            android:textSize="17dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:hint="Position"
+            android:textColorHint="@color/orange"
+            app:boxStrokeColor="@color/orange"
+            app:hintTextColor="@color/orange"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:paddingTop="10dp"
+            android:id="@+id/tnumberofteaching"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Number of Years Teaching"
+            android:textSize="17dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/numberofteaching"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:hint="Number of Years Teaching"
+            android:textColorHint="@color/orange"
+            app:boxStrokeColor="@color/orange"
+            app:hintTextColor="@color/orange"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:paddingTop="10dp"
+            android:id="@+id/teducattainment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Educational Attainment"
+            android:textSize="17dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/educattainment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:hint="Educational Attainment"
+            android:textColorHint="@color/orange"
+            app:boxStrokeColor="@color/orange"
+            app:hintTextColor="@color/orange"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="5dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#99FB6434"
+            android:paddingHorizontal="30dp"
+            android:text="Cancel"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/orange"
+            android:paddingHorizontal="30dp"
+            android:text="SAVE"
+            android:layout_marginLeft="5dp"
+            android:textSize="18sp"
+            app:cornerRadius="20dp" />
+
+    </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
